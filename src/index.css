@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.circle{
+border:  6px solid white;
+
+  animation: round 0.4s linear infinite;
+}
+
+@keyframes round{
+  0%{
+    border-top:6px solid rgb(76, 189, 76) ;
+    border-bottom: 6px solid white;
+  }
+  25%{
+    border-right:6px solid rgb(76, 189, 76) ;
+    border-left: 6px solid white;
+  }
+  50%{
+    border-bottom:6px solid rgb(76, 189, 76) ;
+    border-top: 6px solid white;
+  }
+  75%{
+    border-left:6px solid rgb(76, 189, 76) ;
+    border-right: 6px solid white;
+  }
+  100%{
+    border-top:6px solid rgb(76, 189, 76) ;
+    border-bottom: 6px solid white;
+  }
+}
+@layer components {
+
+
+}
