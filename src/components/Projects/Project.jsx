@@ -7,8 +7,8 @@ import api from "../../assets/projects/api.png"
 import auth from "../../assets/projects/auth.png"
 import airbnb from "../../assets/projects/airbnb.png"
 import ecommerce from "../../assets/projects/ecommerce.png"
-import restarunt from "../../assets/projects/restaurant.png"
-
+import weather from "../../assets/projects/weather.png"
+import emi from "../../assets/projects/emi.png"
 export default function Project() {
   const [Isopen,setIsopen]=useState(false)
   const scrollref=useRef(null)
@@ -72,13 +72,13 @@ export default function Project() {
     }
   };
   return (
-   <section className='container mx-auto'>
+   <section className='container mx-auto mt-20 md:mt-44'>
     <motion.h3
       initial={{ rotate: 180, opacity: 0 }}
       whileInView={{ rotate: 360, opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ root: scrollref }}
-    className= "text-xl mt-10 flex justify-center md:text-5xl text-white font-bold font-sans">My <span className="text-green-400">Skills</span> </motion.h3>
+    className= "text-xl mt-10 flex justify-center md:text-5xl text-white font-bold ">My <span className="text-green-400">Skills</span> </motion.h3>
     <div className='mt-5 lg:mt-10'>
 <Slider {...settings}>
 
@@ -98,13 +98,13 @@ export default function Project() {
 
 </Slider>
     </div>
-    <div className='mt-10' ref={scrollref}>
+    <div className='mt-20 md:mt-44' ref={scrollref} >
     <motion.h3
       initial={{ rotate: 180, opacity: 0 }}
       whileInView={{ rotate: 360, opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ root: scrollref }}
-    className= "text-xl mt-10 text-center md:text-5xl text-white font-bold font-sans">My <span className="text-green-400">Projects</span> </motion.h3>
+    className= "text-xl mt-10 text-center md:text-5xl text-white font-bold ">My <span className="text-green-400">Projects</span> </motion.h3>
 
     {/* projets card */}
     <motion.div
@@ -114,46 +114,141 @@ export default function Project() {
         viewport={{ root: scrollref }}
     className=' md:mt-14 grid grid-cols-1 md:grid-cols-2   lg:grid-cols-3  gap-x-6 gap-y-10 cursor-pointer text-white text-center place-items-center'>
 
-    <motion.div   variants={item} className='relative circle !border-[3px] flex-row  p-3  rounded-2xl w-60  md:w-9/12'>
-      <img src={api} alt="api project" className='lg:w-[18rem] mx-auto' />
-      <p className='text-xs md:text-base font-semibold'>Movie Api Project</p>
-      <FaCode className='hover:text-green-400 text-lg'/>
+<motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={api} alt="api project" className='lg:w-[18rem] mx-auto' />
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                    <a href="https://github.com/bava-bahurdeen/Single-api-creation">
+                    <FaCode className='svg'/></a>
+                       </button>
+                       <span className='title'>Api Project</span>
+ 
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
+    <motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={auth} alt="auth project" className='md:w-[11.5rem] lg:w-[16rem] mx-auto' />
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                    <a href="https://github.com/bava-bahurdeen/Authentication-mern-app">
+                    <FaCode className='svg'/></a>
+                       </button>
+                       <span className='title'>Authentication Project</span>
 
-      <motion.div
-      className="bg-white w-9/12 hidden h-48 top-8 left-10 absolute" >
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
 
-      </motion.div>
-</motion.div>
-    <motion.div variants={item} className='circle !border-[3px]  flex-row   p-3  rounded-2xl w-60 md:w-9/12 '>
-    <img src={auth} alt="auth project" className='md:w-[11.5rem] lg:w-[16rem] mx-auto' />
-    <p className='text-xs md:text-base font-semibold'>Authentication Project</p>
-    <FaCode className='hover:text-green-400 text-lg'/>
-</motion.div>
-    <motion.div variants={item} className='circle !border-[3px]  flex-row  p-3  rounded-2xl w-60 md:w-9/12'>
-    <img src={ecommerce} alt="ecommerce"  className='lg:w-[19rem] mx-auto' />
-    <p className='text-xs md:text-base font-semibold'>Nosra Ecommerce Project</p>
-    <FaCode className='hover:text-green-400 text-lg'/>
-</motion.div>
-    <motion.div variants={item} className='circle !border-[3px]  flex-row  p-3  rounded-2xl w-60 md:w-9/12 '>
-    <img src={airbnb} alt="api project" className='md:w-[9rem] lg:w-[13rem] mx-auto' />
-    <p className='text-xs md:text-base font-semibold'>Airbnb clone Project</p>
-    <FaCode className='hover:text-green-400 text-lg'/>
+    <motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={ecommerce} alt="ecommerce"  className='lg:w-[19rem] mx-auto' />
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                    <a href="https://github.com/bava-bahurdeen/nostra-ecommerce-webapp">
+                    <FaCode className='svg'/></a>
+                       </button>
+                     
+                       <span className='title'>Ecommerce Project</span>
+
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
+
+    <motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={airbnb} alt="api project" className='md:w-[9rem] lg:w-[13rem] mx-auto' />
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                      <a href="https://github.com/bava-bahurdeen/Bootstrap-airbnb-webapp">
+                       <FaCode className='svg'/></a>
+                       </button>
+                       <span className='title'>Airbnb Clone Project</span>
+
+                     
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
+
+    <motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={emi} alt="emi calculator" className='md:w-[11rem] lg:w-[15rem] mx-auto' />
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                    <a href="https://github.com/bava-bahurdeen/EMI-calculator">
+                    <FaCode className='svg'/></a>
+                       </button>
+                       <span className='title'>Emi Calculator</span>
+
+                     
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
+
+    <motion.div class="parent" variants={item}>
+        <div class="card">
+            <div class="glass"></div>
+            <div class="content">
+            <img src={weather} alt="emi project" className='md:w-[11rem] lg:w-[15rem] mx-auto' />
+               
+            </div>
+            <div class="bottom">
+                
+                <div class="social-buttons-container">
+                    <button class="social-button .social-button1">
+                    <a href="https://github.com/bava-bahurdeen/React-Weather-web-app">
+                    <FaCode className='svg'/></a>
+                       </button>
+                       <span className='title'>Weather App Project</span>
+                     
+                </div>
+             
+            </div>
+        </div>
+    </motion.div>
+
+    
 
   </motion.div>
-    <motion.div variants={item} className='circle !border-[3px]  flex-row  p-3  rounded-2xl w-60 md:w-9/12'>
-    <img src={restarunt} alt="api project" className='md:w-[11rem] lg:w-[15rem] mx-auto' />
-    <p className='text-xs md:text-base font-semibold'>Restarunt ui design Project</p>
-    <FaCode className='hover:text-green-400 text-lg'/>
-
-  </motion.div>
-    <motion.div variants={item} className='  circle !border-[3px] w-60  p-3  rounded-2xl md:w-9/12 '>
-    <img src={api} alt="api project" className='lg:w-[18rem] mx-auto' />
-    <p className='text-xs md:text-base font-semibold'>Movie Api Project</p>
-    <FaCode className='hover:text-green-400 text-lg'/>
-
-    </motion.div>
-    </motion.div>
+  
     </div>
+
    </section>
   )
 }

@@ -3,6 +3,7 @@ import Navbar from "./components/Nabbar/Navbar.jsx"
 import HeroSection from './components/Hero/HeroSection.jsx'
 import About from './components/About/About.jsx'
 import Project from './components/Projects/Project.jsx'
+import Contact from './components/Contact/Contact.jsx'
 
 import "./App.css"
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <HeroSection/>
       <About/>
       <Project/>
+  <Contact/>
      
     
     </div>
