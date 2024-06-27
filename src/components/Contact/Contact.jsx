@@ -85,6 +85,16 @@ export default function Contact() {
                 placeholder="Email"
               />
             </Form.Item>
+            <Form.Item
+              name={["user", "number"]}
+              label="Number"
+             
+            >
+              <InputNumber
+                className="!p-1 !text-white !font-extrabold  placeholder:!text-green-400 !border-4 !border-green-400 focus:!border-green-400 md:!w-96"
+                placeholder="Phone"
+              />
+            </Form.Item>
 
             <Form.Item name={["user", "introduction"]} label="Message">
               <Input.TextArea
@@ -146,10 +156,10 @@ export default function Contact() {
             </span>
           </div>
           <div className=" mt-3  flex items-center gap-2 justify-center md:justify-start  ">
-            <a href="https://in.linkedin.com/in/bavabahurdeen">
+            <a href="https://in.linkedin.com/in/bavabahurdeen" target="_blank">
               <LiaLinkedin className="size-10 cursor-pointer  hover:text-green-400" />
             </a>
-            <a href="https://github.com/bava-bahurdeen">
+            <a href="https://github.com/bava-bahurdeen" target="_blank">
               <FaGithub className="size-7 cursor-pointer hover:text-green-400" />
             </a>
           </div>

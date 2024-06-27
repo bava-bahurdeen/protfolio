@@ -124,7 +124,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                    <a href="https://github.com/bava-bahurdeen/Single-api-creation">
+                    <a href="https://github.com/bava-bahurdeen/Single-api-creation" target="_blank">
                     <FaCode className='svg'/></a>
                        </button>
                        <span className='title'>Api Project</span>
@@ -144,7 +144,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                    <a href="https://github.com/bava-bahurdeen/Authentication-mern-app">
+                    <a href="https://github.com/bava-bahurdeen/Authentication-mern-app" target="_blank">
                     <FaCode className='svg'/></a>
                        </button>
                        <span className='title'>Authentication Project</span>
@@ -165,7 +165,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                    <a href="https://github.com/bava-bahurdeen/nostra-ecommerce-webapp">
+                    <a href="https://github.com/bava-bahurdeen/nostra-ecommerce-webapp" target="_blank">
                     <FaCode className='svg'/></a>
                        </button>
                      
@@ -187,7 +187,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                      <a href="https://github.com/bava-bahurdeen/Bootstrap-airbnb-webapp">
+                      <a href="https://github.com/bava-bahurdeen/Bootstrap-airbnb-webapp" target="_blank">
                        <FaCode className='svg'/></a>
                        </button>
                        <span className='title'>Airbnb Clone Project</span>
@@ -209,7 +209,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                    <a href="https://github.com/bava-bahurdeen/EMI-calculator">
+                    <a href="https://github.com/bava-bahurdeen/EMI-calculator" target="_blank">
                     <FaCode className='svg'/></a>
                        </button>
                        <span className='title'>Emi Calculator</span>
@@ -232,7 +232,7 @@ export default function Project() {
                 
                 <div class="social-buttons-container">
                     <button class="social-button .social-button1">
-                    <a href="https://github.com/bava-bahurdeen/React-Weather-web-app">
+                    <a href="https://github.com/bava-bahurdeen/React-Weather-web-app "target="_blank">
                     <FaCode className='svg'/></a>
                        </button>
                        <span className='title'>Weather App Project</span>

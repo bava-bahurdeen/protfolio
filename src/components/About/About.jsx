@@ -88,10 +88,10 @@ export default function About() {
             engines, enhancing their visibility and reach.
           </motion.p>
           <div className="mt-3 flex items-center gap-2 justify-center md:justify-start  ">
-            <a href="https://in.linkedin.com/in/bavabahurdeen">
+            <a href="https://in.linkedin.com/in/bavabahurdeen" target="_blank">
               <LiaLinkedin className="size-10 cursor-pointer  hover:text-green-400" />
             </a>
-            <a href="https://github.com/bava-bahurdeen">
+            <a href="https://github.com/bava-bahurdeen" target="_blank">
               <FaGithub className="size-7 cursor-pointer hover:text-green-400" />
             </a>
           </div>

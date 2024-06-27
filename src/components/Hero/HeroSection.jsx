@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import developer from "../../assets/Hero_images/developer.png";
 import seo from "../../assets/Hero_images/SEO.png";
 import blockchain from "../../assets/Hero_images/blockchain.png";
 import { motion} from "framer-motion";
 import { Carousel } from "antd";
 export default function HeroSection() {
-;
+const [Hover,setHover]=useState(false)
   return (
     <section className="container mx-auto md:h-svh overflow-hidden">
       <Carousel
@@ -37,9 +37,21 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="border w-36 rounded-3xl p-2 mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold hover:bg-green-400 hover:text-white"
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="border w-36 overflow-hidden relative rounded-3xl p-2 mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold"
             >
               Connect With Me
+              {Hover && (
+                  <motion.div
+                    initial={{ x:0, rotate: 45 }} // Set initial rotation to 0 degrees
+                    animate={{ x: 200, rotate: 45 }} // Animate to 45 degrees rotation
+                    exit={{ x: 0, rotate: 45 }} // Exit with 0 degrees rotation
+                    transition={{ duration: 0.5 }}
+                    className="bg-white w-4 h-32 absolute -top-10 -left-4 rounded-full"
+                  ></motion.div>
+                )}
+              
             </motion.button>
           </div>
           {/* image div */}
@@ -76,10 +88,22 @@ export default function HeroSection() {
             <motion.button
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 3 }}
-              className="border w-36 rounded-3xl p-2  mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold hover:bg-green-400 hover:text-white"
+              transition={{ duration: 1 }}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="border w-36 overflow-hidden relative rounded-3xl p-2 mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold"
             >
               Connect With Me
+              {Hover && (
+                  <motion.div
+                    initial={{ x:0, rotate: 45 }} // Set initial rotation to 0 degrees
+                    animate={{ x: 200, rotate: 45 }} // Animate to 45 degrees rotation
+                    exit={{ x: 0, rotate: 45 }} // Exit with 0 degrees rotation
+                    transition={{ duration: 0.5 }}
+                    className="bg-white w-4 h-32 absolute -top-10 -left-4 rounded-full"
+                  ></motion.div>
+                )}
+              
             </motion.button>
           </div>
           {/* image div */}
@@ -116,10 +140,22 @@ export default function HeroSection() {
             <motion.button
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 6 }}
-              className="border w-36 rounded-3xl p-2 mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold hover:bg-green-400 hover:text-white"
+              transition={{ duration: 1 }}
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="border w-36 overflow-hidden relative rounded-3xl p-2 mx-auto  duration-300 mt-4 border-green-400 text-green-400 font-semibold"
             >
               Connect With Me
+              {Hover && (
+                  <motion.div
+                    initial={{ x:0, rotate: 45 }} // Set initial rotation to 0 degrees
+                    animate={{ x: 200, rotate: 45 }} // Animate to 45 degrees rotation
+                    exit={{ x: 0, rotate: 45 }} // Exit with 0 degrees rotation
+                    transition={{ duration: 0.5 }}
+                    className="bg-white w-4 h-32 absolute -top-10 -left-4 rounded-full"
+                  ></motion.div>
+                )}
+              
             </motion.button>
           </div>
           {/* image div */}
