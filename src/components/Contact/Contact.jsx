@@ -1,17 +1,19 @@
 import React, { useRef } from "react";
-import { Button, Form, Input, InputNumber } from "antd";
+import { Button, Form, Input, InputNumber, message } from "antd";
 import { TbMailShare } from "react-icons/tb";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { RiUserLocationLine } from "react-icons/ri";
 import { LiaLinkedin } from "react-icons/lia";
 import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
-import contact from "../../assets/contact/graphic-contact.png";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import axios from "axios";
 
 export default function Contact() {
   const scrollref = useRef(null);
   const [Hover,setHover]=useState(false)
+  const [form]=Form.useForm()
   const layout = {
     labelCol: {
       span: 8,
@@ -32,8 +34,41 @@ export default function Contact() {
   };
 
   const onFinish = (values) => {
-    console.log(values);
-  };
+    
+
+    //Emailjs service ID,template ID, and public key
+    const seriveID="service_q0kq7es";
+    const templateID="template_uqczw0k";
+    const publickey="9QaTwQMN-6ywEaz4t"
+
+    const data={
+      service_id:seriveID,
+      template_id:templateID,
+      user_id:publickey,
+   templateParams:{
+      from_name:values.name,
+      from_email:values.email,
+      from_phone:values.number,
+      to_name:"Bava Bahurdeen",
+      message:values.message
+
+      }
+      
+    }
+
+//send the email using emailjs
+try{
+const res= axios.post("https://api.emailjs.com/api/v1.0/email/send",data,)
+console.log(res.data);
+console.log(res);
+}
+catch(error){
+  console.log(error.message);
+}
+   
+};
+
+ 
   return (
     <div ref={scrollref} className="mt-20 md:mt-44 container">
       <motion.h3
@@ -55,6 +90,7 @@ export default function Contact() {
         >
           <Form
             {...layout}
+            form={form}
             name="nest-messages"
             onFinish={onFinish}
             layout="vertical"
@@ -62,7 +98,7 @@ export default function Contact() {
             validateMessages={validateMessages}
           >
             <Form.Item
-              name={["user", "name"]}
+              name={ "name"}
               label="Name"
               className="!text-white "
             >
@@ -72,7 +108,7 @@ export default function Contact() {
               />
             </Form.Item>
             <Form.Item
-              name={["user", "email"]}
+              name={ "email"}
               label="Email"
               rules={[
                 {
@@ -81,22 +117,22 @@ export default function Contact() {
               ]}
             >
               <Input
-                className="!p-2 !text-white !font-extrabold  placeholder:!text-green-400 !border-4 !border-green-400 focus:!border-green-400 md:!w-96"
+                className="!p-2  !font-extrabold  placeholder:!text-green-400 !border-4 !border-green-400 focus:!border-green-400 md:!w-96"
                 placeholder="Email"
               />
             </Form.Item>
             <Form.Item
-              name={["user", "number"]}
+              name={ "number"}
               label="Number"
              
             >
-              <InputNumber
-                className="!p-1 !text-white !font-extrabold  placeholder:!text-green-400 !border-4 !border-green-400 focus:!border-green-400 md:!w-96"
+              <Input
+                className="!p-2 !text-white !font-extrabold  placeholder:!text-green-400 !border-4 !border-green-400 focus:!border-green-400 md:!w-96"
                 placeholder="Phone"
               />
             </Form.Item>
 
-            <Form.Item name={["user", "introduction"]} label="Message">
+            <Form.Item name={ "message"} label="Message">
               <Input.TextArea
                 autoSize={{ minRows: 6 }}
                 className="!p-2 placeholder:!text-green-400  !font-extrabold !border-4 !border-green-400 focus:!border-green-400 md:!w-[50rem]"
@@ -168,3 +204,4 @@ export default function Contact() {
     </div>
   );
 }
+
